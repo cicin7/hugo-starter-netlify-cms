@@ -1,10 +1,10 @@
-title = "My New Hugo Site"
+title = "Test Site"
 
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
+    identifier = "services"
+    name = "Services"
+    url = "/services"
     weight = 10
 
   [[menu.main]]
@@ -12,3 +12,9 @@ title = "My New Hugo Site"
     name = "About"
     url = "/about"
     weight = 20
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact"
+    weight = 30
