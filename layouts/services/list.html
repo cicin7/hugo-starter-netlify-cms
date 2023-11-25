@@ -1,10 +1,19 @@
-{{ define "main" }}
-<div class="services">
-    {{ range .Pages }}
-    <div class="service">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Content }}</p>
-    </div>
-    {{ end }}
-</div>
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+{{ range.Data.Pages }}
+<article class="post-snippet">
+
+  <h3 class="title">
+    {{ .Title }}
+  </h3>
+  <p class="desc">
+    {{ .Summary }}
+  </p>
+  <button class="button">BUTTON</button>
+  
+</article>
 {{ end }}
+
+{{ partial "footer.html" . }}
