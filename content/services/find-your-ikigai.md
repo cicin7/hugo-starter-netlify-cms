@@ -1,5 +1,5 @@
 ---
-title: FIND YOUR IKIGAI izmijena
+title: FIND YOUR IKIGAI izmijen
 weight: 3
 background_image: img/photo-3.png
 ---
