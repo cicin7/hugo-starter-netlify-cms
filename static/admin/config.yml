@@ -52,7 +52,7 @@ collections:
     label: "Services"
     folder: "content/services"
     create: true
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Draft", name: "draft", widget: "boolean"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean"}
