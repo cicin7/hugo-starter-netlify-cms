@@ -1,7 +1,16 @@
 </main>
 	
-<footer>
-	<p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
+<footer class="footer">
+
+    <ul class="main-menu">
+      {{ range.Site.Menus.footer }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  
+	<!-- <p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p> -->
 </footer>
 
 <script>

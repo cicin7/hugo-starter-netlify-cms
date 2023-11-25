@@ -1,19 +1,23 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title }}</h1>
-
 {{ range sort .Pages "Params.weight" }}
-<article class="post-snippet">
 
-  <h3 class="title">
-    {{ .Title }}
-  </h3>
-  <p class="desc">
-    {{ .Summary }}
-  </p>
-  <button class="button">BUTTON</button>
-  
-</article>
+  <div class="article-wrap" style="background-image: url('{{ .Params.background_image }}');">
+
+    <article class="post-snippet">
+
+      <h3 class="title">
+        {{ .Title }}
+      </h3>
+      <p class="desc">
+        {{ .Summary }}
+      </p>
+      <button class="button">BUTTON</button>
+      
+    </article>
+
+  </div>
+
 {{ end }}
 
 {{ partial "footer.html" . }}
