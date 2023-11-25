@@ -2,7 +2,8 @@
 
 {{ range sort .Pages "Params.weight" }}
 
-  <div class="article-wrap" style="background-image: url('{{ printf "/img/%s" (.Params.background_image | urlize) }}');">
+  <div class="article-wrap" style="background-image: url('/{{ .Params.background_image }}');">
+
     <article class="post-snippet">
 
       <h3 class="title">
