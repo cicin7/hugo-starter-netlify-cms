@@ -1,5 +1,5 @@
 ---
-title: TRANSFORMATION THROUGH 5 ELEMENTS
+title: TRANSFORMATION THROUGH 5 ELEMENTS
 weight: 1
 background_image: img/photo-1.png
 ---
