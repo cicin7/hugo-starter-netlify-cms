@@ -1,5 +1,6 @@
 ---
-title: "BUSINESS AWARENESS"
+title: BUSINESS AWARENESS
+weight: 2
 background_image: img/photo-1.png
 ---
 
