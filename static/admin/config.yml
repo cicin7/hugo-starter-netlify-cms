@@ -47,3 +47,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "text" }
+
+  - name: "Services"
+    label: "Services"
+    files:
+      - file: "content/services/index.md"
+        label: "Services"
+        name: "services"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
