@@ -113,10 +113,26 @@ img {
   padding: 5rem 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: center;
+}
+
+.article-wrap {
+  position: relative;
+}
+
+.article-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(5, 89, 110, 0.30);
+  z-index: 1; /* Ensure the overlay is above the background image but below the content */
 }
 
 .post-snippet {
+  position: relative;
   width: 844px;
   display: flex;
   flex-direction: column;
@@ -126,6 +142,7 @@ img {
   padding: 2rem;
   border: 20px solid #F8C55B;
   background: rgba(14, 14, 14, 0.55);
+  z-index: 2;
 }
 
 .post-snippet h3 {
@@ -149,6 +166,7 @@ img {
 }
 
 .button {
+  position: relative;
   color: #000;
   font-size: 2rem;
   font-weight: 600;
@@ -158,6 +176,7 @@ img {
   height: 64px;
   flex-shrink: 0;
   margin-top: 7.3rem;
+  z-index: 3;
 }
 
 .button:hover {
@@ -177,6 +196,10 @@ img {
 .footer {
   max-width: 95vw;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9.2rem 0 6.5rem 0;
 }
 
 .site-header {
@@ -188,4 +211,40 @@ img {
   display: block;
   width: 162px;
   height: 53px;
+}
+
+.footer-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.7rem;
+}
+
+.vedro-footer {
+  width: 16.2rem;
+  height: 5.3rem;
+  display: block;
+}
+
+.insta {
+  display: block;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.footer-menu {
+  max-width: 53rem;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  row-gap: 4.6rem;
+  column-gap: 10.2rem;
+}
+
+.footer-items {
+  color: #000;
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-transform: initial;
 }

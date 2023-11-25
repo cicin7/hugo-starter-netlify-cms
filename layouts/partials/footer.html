@@ -2,10 +2,17 @@
 	
 <footer class="footer">
 
-    <ul class="main-menu">
+    <div class="footer-1">
+
+      <img class="vedro-footer" src="/img/vedro-logo.svg" alt="">
+      <img class="insta" src="/img/instagram-logo.png" alt="">
+
+    </div>
+
+    <ul class="footer-menu">
       {{ range.Site.Menus.footer }}
       <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        <a class="footer-items" href="{{ .URL }}">{{ .Name }}</a>
       </li>
       {{ end }}
     </ul>
