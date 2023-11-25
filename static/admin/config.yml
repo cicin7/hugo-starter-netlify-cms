@@ -48,9 +48,9 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "text" }
 
-      - name: "services"
+      - file: "content/services/index.md"
         label: "Services"
-        folder: "content/services"
+        name: "services"
         create: true
         fields:
           - {label: "Title", name: "title", widget: "string"}
