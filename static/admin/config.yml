@@ -54,6 +54,9 @@ collections:
       - file: "content/services/index.md"
         label: "Services"
         name: "services"
+        media_folder: "" # Save images in the post's own folder instead of the static folder
+        public_folder: ""
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "text" }
+          - { label: "Featured Image", name: "image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
