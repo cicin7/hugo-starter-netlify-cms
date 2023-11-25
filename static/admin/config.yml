@@ -54,6 +54,8 @@ collections:
       - file: "content/services/index.md"
         label: "Services"
         name: "services"
+        folder: "content/services" # The path to the folder where the documents are stored
+        path: "{{slug}}/index"
         media_folder: "" # Save images in the post's own folder instead of the static folder
         public_folder: ""
         fields:
