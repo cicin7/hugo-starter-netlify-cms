@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="services">
+    {{ range .Pages }}
+    <div class="service">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Content }}</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

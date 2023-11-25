@@ -48,28 +48,11 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "text" }
 
-  - name: "Services"
-    label: "Services"
-    files:
-      - file: "content/services/service-1"
-        label: "Service-1"
-        name: "service-1"
-        folder: "content/services/service-1" # The path to the folder where the documents are stored
-        path: "{{slug}}/index"
-        media_folder: "" # Save images in the post's own folder instead of the static folder
-        public_folder: ""
+      - name: "services"
+        label: "Services"
+        folder: "content/services"
+        create: true
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Featured Image", name: "image", widget: "image" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "content/services/service-2"
-        label: "Service-2"
-        name: "service-2"
-        folder: "content/services/service-2" # The path to the folder where the documents are stored
-        path: "{{slug}}/index"
-        media_folder: "" # Save images in the post's own folder instead of the static folder
-        public_folder: ""
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Featured Image", name: "image", widget: "image" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Draft", name: "draft", widget: "boolean"}
