@@ -12,7 +12,7 @@
 
     {{ if $image := resources.GetMatch $trimmedImagePath }}
 
-      <div class="article-wrap" style="background-image: url('{{ ( $image.Resize "600x" ).RelPermalink }}');">
+      <div class="article-wrap" style="background-image: url('{{ ( $image.Resize "600x webp" ).RelPermalink }}');">
 
         <article class="post-snippet">
 
@@ -23,7 +23,7 @@
           <p class="desc">
             {{ .Summary }}
           </p>
-          
+
           <button class="button">BUTTON</button>
           
         </article>
