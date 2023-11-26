@@ -1,39 +1,39 @@
 {{ partial "header.html" . }}
 
-
-
-
 {{ range sort .Pages "Params.weight" }}
 
+  {{ $imagePath := .Params.background_image }}
 
+  {{ if $imagePath }}
 
-{{ $image := resources.GetMatch .Params.background_image }}
+    {{ $trimmedLeadingSlash := strings.TrimPrefix "/" $imagePath }}
 
-{{ if $image }}
+    {{ $trimmedImagePath := strings.TrimPrefix "assets/" $trimmedLeadingSlash }}
 
-  {{ $trimmedImagePath := strings.TrimPrefix "/assets/" .Params.background_image }}
+    {{ if $image := resources.GetMatch $trimmedImagePath }}
 
-  <div class="article-wrap" style="background-image: url('{{ (resources.GetMatch $trimmedImagePath).RelPermalink }}');">
-    
-    <article class="post-snippet">
+      <div class="article-wrap" style="background-image: url('{{ ( $image.Resize "600x" ).RelPermalink }}');">
 
-      <h3 class="title">
-        {{ .Title }}
-      </h3>
-      <p class="desc">
-        {{ .Summary }}
-      </p>
-      <button class="button">BUTTON</button>
-      
-    </article>
+        <article class="post-snippet">
 
-  </div>
+          <h3 class="title">
+            {{ .Title }}
+          </h3>
+
+          <p class="desc">
+            {{ .Summary }}
+          </p>
+          
+          <button class="button">BUTTON</button>
+          
+        </article>
+
+      </div>
+
+    {{ end }}
+
+  {{ end }}
 
 {{ end }}
-
-{{ end }}
-
-
-
 
 {{ partial "footer.html" . }}
