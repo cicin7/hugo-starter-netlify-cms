@@ -1,8 +1,15 @@
 {{ partial "header.html" . }}
 
+
+
+
 {{ range sort .Pages "Params.weight" }}
 
-  <div class="article-wrap" style="background-image: url('/{{ .Params.background_image }}');">
+
+
+{{ $image := resources.GetMatch .Params.background_image }}
+  
+  <div class="article-wrap" style="background-image: url('{{ if $image }}{{ ( $image.Resize "600x" ).RelPermalink }}{{ end }}');">
 
     <article class="post-snippet">
 
@@ -18,6 +25,11 @@
 
   </div>
 
+
+
 {{ end }}
+
+
+
 
 {{ partial "footer.html" . }}
