@@ -7,10 +7,14 @@
 
 
 
-{{ $imagePath := .Params.background_image }}
-{{ $trimmedImagePath := strings.TrimPrefix "assets/" $imagePath }}
+{{ $image := resources.GetMatch .Params.background_image }}
 
-<div class="article-wrap" style="background-image: url('{{ if $imagePath }}{{ (resources.GetMatch $trimmedImagePath).RelPermalink }}{{ end }}');">
+{{ if $image }}
+
+  {{ $trimmedImagePath := strings.TrimPrefix "/assets/" .Params.background_image }}
+
+  <div class="article-wrap" style="background-image: url('{{ (resources.GetMatch $trimmedImagePath).RelPermalink }}');">
+    
     <article class="post-snippet">
 
       <h3 class="title">
@@ -25,7 +29,7 @@
 
   </div>
 
-
+{{ end }}
 
 {{ end }}
 
