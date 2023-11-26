@@ -52,8 +52,8 @@ collections:
     label: "Services"
     folder: "content/services"
     create: true
-    media_folder: "/assets/images/services"
-    public_folder: "/assets/images/services"
+    media_folder: "images/services"
+    public_folder: "/images/services"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
